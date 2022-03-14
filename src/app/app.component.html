@@ -1,0 +1,54 @@
+   <mat-card class="containder">
+        <mat-card-header>
+    
+            <mat-card-title class="titulo">Todo App</mat-card-title>
+    
+            <mat-card-subtitle class="subtitulo">
+                <input type="text" placeholder="Add you new todo" #inputText>
+                <button (click)="add(inputText.value)" (click)="Somar_um (ValorDei)" btn >+</button>
+            </mat-card-subtitle>
+    
+        </mat-card-header>
+    
+        <mat-card-content class="conteudo"> 
+            <mat-list>
+                <mat-list-item *ngFor="let item of list; let idx = index" >{{inputText.value}} 
+                </mat-list-item>
+            </mat-list>
+             <app-btn  *ngFor="let item of list; let idx = index" (btnClickEvent)="alertar($event)" (click)="Deletar(inputText.value)">delete</app-btn> 
+        </mat-card-content>
+    
+        <mat-card-footer class="rodape">
+          <p>You have {{ValorDei}} pending tasks</p>
+            <button (click)="Remove(inputText.value)" color="primary">Clear All</button> 
+        </mat-card-footer>
+    </mat-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

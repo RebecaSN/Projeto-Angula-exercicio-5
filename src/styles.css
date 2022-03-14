@@ -1,0 +1,12 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Hind", sans-serif; /*não sei pq não pega */
+    background: linear-gradient( rgb(102,225,204), rgb(75,129,229));
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: row;
+    height: 100vh;
+
+
+}
