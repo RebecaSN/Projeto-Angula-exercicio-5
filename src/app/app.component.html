@@ -1,29 +1,38 @@
-   <mat-card class="containder">
+
+<app-card></app-card>
+
+
+<mat-card class="containder">
         <mat-card-header>
     
-            <mat-card-title class="titulo">Todo App</mat-card-title>
+            <mat-card-title id="titu" class="titulo">Todo App</mat-card-title>
     
             <mat-card-subtitle class="subtitulo">
-                <input type="text" placeholder="Add you new todo" #inputText>
-                <button (click)="add(inputText.value)" (click)="Somar_um (ValorDei)" btn >+</button>
+                <input class="input" type="text" placeholder="Add you new todo" #inputText>
+                <button (click)="add(inputText.value)" (click)="Somar_um (ValorDei)" btn (click)="SalvarLS(inputText.value)" >+</button>
             </mat-card-subtitle>
     
         </mat-card-header>
     
         <mat-card-content class="conteudo"> 
-            <mat-list>
-                <mat-list-item *ngFor="let item of list; let idx = index" >{{inputText.value}} 
+            <mat-list class="oi">
+                <mat-list-item *ngFor="let item of list; let idx = index"> 
+                   <div class="ipt" #item >{{item}} </div><br>
+                    <app-btn (btnClickEvent)="alertar($event)" (click)="Deletar(idx)" (click)=" DeletarLSt(idx)" ></app-btn>
                 </mat-list-item>
             </mat-list>
-             <app-btn  *ngFor="let item of list; let idx = index" (btnClickEvent)="alertar($event)" (click)="Deletar(inputText.value)">delete</app-btn> 
         </mat-card-content>
     
         <mat-card-footer class="rodape">
-          <p>You have {{ValorDei}} pending tasks</p>
-            <button (click)="Remove(inputText.value)" color="primary">Clear All</button> 
+          <p class="hi">You have {{ValorDei}} pending tasks</p>
+            <button btnb (click)="Remove(inputText.value)" (click)="DeletarLST(0)" color="primary">Clear All</button> 
         </mat-card-footer>
     </mat-card>
 
+
+<!-- <p *ngFor="let dado of dadoLocalStorage; let i =index" >
+    {{dadoLocalStorage}}<!--quando recarregar, o dado vai aparecer na tela
+</p> -->
 
 
 

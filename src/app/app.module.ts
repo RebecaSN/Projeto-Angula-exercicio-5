@@ -7,14 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MaterialModule}from './material.module';
 import { CardComponent } from './card/card.component';
 import { BonitoCardDirective } from './bonito-card.directive';
-import { BtnComponent } from './btn/btn.component'
+import { BtnComponent } from './btn/btn.component';
+import { BotaoBonitoDirective } from './botao-bonito.directive';
+import { DeletarbonitoDirective } from './deletarbonito.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     BonitoCardDirective,
-    BtnComponent
+    BtnComponent,
+    BotaoBonitoDirective,
+    DeletarbonitoDirective
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,8 @@ import { BtnComponent } from './btn/btn.component'
     MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
+  
 })
 export class AppModule { }

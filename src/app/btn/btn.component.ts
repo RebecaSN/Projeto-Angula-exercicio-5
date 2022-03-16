@@ -10,7 +10,7 @@ export class BtnComponent{
  @Output()
  btnClickEvent: EventEmitter<string> = new EventEmitter<any>()
 
- emitirEvento(evento:any):void{
+ emitirEvento():void{
  this.btnClickEvent.emit('$event')
  }
 
